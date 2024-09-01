@@ -166,6 +166,7 @@ nav ul li a:hover::after{
 }
 
 /* Skills Section */
+
 .clearfix::after {
     content: "";
     display: block;
@@ -176,8 +177,7 @@ nav ul li a:hover::after{
     width: 100%;
     height: auto;
     color: #333333;
-    padding-top: 55px;
-    padding-bottom: 50px;
+    padding: 25px;
     margin-top: 11%;
     text-align: center;
     background-color:hsl(62, 50%, 50%);
@@ -190,5 +190,23 @@ nav ul li a:hover::after{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+}
+
+.skill-logo{
+    width: 60px;
+}
+
+.skill-item{
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+}
+
+.skill-name{
+    display: block;
+    font-size: 14px;
+}
+
+.skill-item:hover .skill-name {
+    color: #eb5d17;
 }
