@@ -210,3 +210,50 @@ nav ul li a:hover::after{
 .skill-item:hover .skill-name {
     color: #eb5d17;
 }
+
+/* Project Section */
+.project{
+    background-color: whitesmoke;
+
+}
+
+.projects-content{
+    max-width: 1200px;/* */
+    margin: 0 auto;/* */
+    padding: 0 10px;/* */
+    align-items: center;
+}
+
+.projects-title{
+    width: 80%; /* projects resize / remove if project name dives not fitting well */
+    margin: 1rem;
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-title{
+    position: relative;
+    
+}
+
+.project-box{
+    width: 80%; /* projects resize / remove if project name dives not fitting well */
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.project-name {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
+
+  .project-name img{
+    width: 300px;
+  }
