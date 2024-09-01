@@ -9,15 +9,20 @@ body {
     align-items: center;
     margin-left: 2.9em;
 }
-/* Header Styles */
+
+/* Header Section */
+
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px; 
+    color: #333;
+    padding: 0 10px; 
     text-align: center;
+    border-bottom: 0.1px solid #afacac;
 }
 
 header nav{
+    max-width: 1200px;/* */
+    margin: 0 auto;/* */
+    padding: 0 20px;/* */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,52 +36,159 @@ header nav ul{
 
 header nav ul li{
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 header nav ul li a{
-color: white;
+color: #333;
 font-weight: 50%;
 text-decoration: none;
+position: relative;
 
 }
 
+nav ul li a::after{
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+nav ul li a:hover {
+    color: #3498db;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
 .logo{
-    width: 100px;
+    width: 80px;
 }
 
-/* Hero Section */
-.hero {
+/* home  Section */
+.home{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+}
+
+.text-content{
+    width: 50%;
+    float: left;
+    margin-top: 100px;
+    height: 20%;
+}
+
+.text-content h1{
+    font-size: 4.5em;
+    margin-bottom: 0.5em;
+}
+
+.text-content h2{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.text-content h3{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #3498db;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-top: 1em;
+    background-color: #3498db;
+    color: #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons .btn:hover {
+    background-color: #2980b9;
+}
+
+.buttons .btn{
+    text-decoration: none;
+}
+
+.image-content{
+    width: 50%;
+    float: left;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 0px;
+    background-color: #eb5d17;
+    margin-top: 100px;
+}
+
+.image-box{
+    width: 80%;
+    height: calc(100% - 40px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color:  hwb(204 32% 10%); /* to be changed after adding animation to the image box div  line 153 - 163*/
     align-items: center;
-    padding: 20px;
-    background-color: #f4f4f4;
+    margin-left: 10%;
+    margin-top: 40px;
+    position: relative;
+    border-radius: 40px;
 }
 
-.float-parent-element { 
-    width: 50%; 
-} 
-.float-child-element { 
-    float: left; 
-    width: 50%; 
-} 
-.red { 
-    background-color: red; 
-    margin-left: 50%; 
-    height: 100px; 
-} 
-.yellow { 
-    margin-left: 50%; 
-    height: 100px; 
-    background-color: yellow; 
+.profile-picture{
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    left: 10%;
 }
 
-.form-container {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    text-align: left;
+@keyframes colorChange {
+    0% { color: #34dbb1; }  
+    50% { color: #e74c3c; } 
+    100% { color: #3498db; } 
+}
+
+.image-box {
+    animation: colorChange 3s infinite; 
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Skills Section */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.skills{
+    width: 100%;
+    height: auto;
+    color: #333333;
+    padding-top: 55px;
+    padding-bottom: 50px;
+    margin-top: 11%;
+    text-align: center;
+    background-color:hsl(62, 50%, 50%);
+}
+
+.skills-content{
+    max-width: 1200px;/* */
+    margin: 0 auto;/* */
+    padding: 0 10px;/* */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
