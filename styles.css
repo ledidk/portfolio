@@ -104,12 +104,13 @@ nav ul li a:hover::after{
 
 .buttons .btn{
     display: inline-block;
-    padding: 10px 20px;
+    padding:12px 28px;
+    font-size: 16px;
     margin-right: 10px;
     margin-top: 1em;
     background-color: #3498db;
-    color: #000000;
-    border-radius: 8px;
+    color: white;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -212,10 +213,10 @@ nav ul li a:hover::after{
 }
 
 /* Project Section */ 
-/* General styles for the project section */
+
 .projects {
     background-color: whitesmoke;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .projects-content {
@@ -225,15 +226,14 @@ nav ul li a:hover::after{
 }
 
 .projects-title {
-    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: grid; /* grid display for project items  */
+    grid-template-columns: repeat(3, 1fr); /* grid colum row and numbers  */
     gap: 2rem;
 }
 
@@ -241,16 +241,21 @@ nav ul li a:hover::after{
     background-color: #f8f8f8;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
     overflow: hidden;
+    transition: transform 0.3s ease; 
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Slightly lifts the box on hover */
 }
 
 .project-item img {
     width: 100%;
     height: auto;
+    object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 1rem;
 }
 
 .project-caption h2 {
@@ -264,20 +269,26 @@ nav ul li a:hover::after{
 }
 
 .project-buttons {
-    display: flex;
-    justify-content: space-around;
+    /* display: flex; */
+    /* justify-content: flex-start; /* Aligning the buttons to the left */
+    gap: 0.5rem;
 }
 
 .project-buttons button {
-    padding: 0.5rem 1rem;
-    background-color: #3498db;
-    color: white;
     border: none;
-    border-radius: 4px;
+    padding:12px 28px;
+    margin-top: 10px;
+    margin-right: 25px;
+    font-size: 16px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: #3498db;
+    color: white;
 }
 
-.project-buttons button:hover {
+.project-buttons button:hover{
     background-color: #2980b9;
 }
+
+
