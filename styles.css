@@ -212,10 +212,26 @@ nav ul li a:hover::after{
     color: #eb5d17;
 }
 
+/* Notes Section */
+.notes{
+
+}
+.notes-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.notes-content h1{
+    background-color: #2980b9;
+}
+
+.note-details{
+    background-color: #34dbb1;
+}
+
 /* Project Section */ 
 
 .projects {
-    background-color: whitesmoke;
     padding: 4rem 0;
 }
 
@@ -231,6 +247,16 @@ nav ul li a:hover::after{
     align-items: center;
 }
 
+.allprojects-btn{
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 0.5px solid #333;
+    color: black;
+}
+.allprojects-btn:hover{
+    background-color: #e7e7e7;
+}
 .project-grid {
     display: grid; /* grid display for project items  */
     grid-template-columns: repeat(3, 1fr); /* grid colum row and numbers  */
@@ -247,16 +273,6 @@ nav ul li a:hover::after{
     transition: transform 0.3s ease; 
 }
 
-.project-item:hover {
-   /* transform: translateY(-5px); /* Slightly lifts the box on hover */
-}
-
-.project-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-}
 
 .project-caption h2 {
     font-size: 1.5rem;
