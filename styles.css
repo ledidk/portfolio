@@ -40,7 +40,7 @@ header nav ul li{
 }
 
 header nav ul li a{
-color: #333;
+color:  #3498db;
 font-weight: 50%;
 text-decoration: none;
 position: relative;
@@ -58,7 +58,7 @@ nav ul li a::after{
     transition: 0.4s;
 }
 nav ul li a:hover {
-    color: #3498db;
+    color: #2980b9;
 }
 nav ul li a:hover::after{
     width: 100%;
@@ -248,7 +248,7 @@ nav ul li a:hover::after{
 }
 
 .project-item:hover {
-    transform: translateY(-5px); /* Slightly lifts the box on hover */
+   /* transform: translateY(-5px); /* Slightly lifts the box on hover */
 }
 
 .project-item img {
@@ -283,12 +283,12 @@ nav ul li a:hover::after{
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background-color: #3498db;
+    background-color: hsl(62, 50%, 50%);
     color: white;
 }
 
 .project-buttons button:hover{
-    background-color: #2980b9;
+    background-color:hsl(62, 40%, 50%);
 }
 
 
