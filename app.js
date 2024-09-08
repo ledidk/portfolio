@@ -23,3 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
         dateLink.classList.remove('hovered');
     });
 });
+
+
+
+function changeImage(imagePath, element) {
+    // Change the main image source
+    document.getElementById('main-image').src = imagePath;
+
+    // Remove 'active' class from all badge-details divs
+    var details = document.querySelectorAll('.badge-details');
+    details.forEach(function(detail) {
+        detail.classList.remove('active');
+    });
+
+    // Add 'active' class to the clicked div
+    element.classList.add('active');
+}

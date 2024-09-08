@@ -258,7 +258,7 @@ nav ul li a:hover::after{
 }
 .note-details .title a{
     text-decoration: none;
-    color: #0000EE;
+    color: #3939c3;
     transition: color 0.3s ease;
 }
 .note-details .dates a {
@@ -366,4 +366,97 @@ nav ul li a:hover::after{
     background-color:hsl(62, 40%, 50%);
 }
 
+/* badges  */
 
+.badges {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0 20px;
+}
+
+.badges-title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /
+}
+
+.badges-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.badge-image {
+    flex: 1; /* Take up space for the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge-details {
+    flex: 1; /* Take up equal space for each badge detail */
+    padding: 15px;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.badge-details:hover {
+    border-left: 3px solid #0000EE; /* Change border color on hover */
+}
+
+.badge-details.active {
+    border-left: 3px solid #0000EE; /* Change border color when active */
+}
+
+.badge-details h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.badge-details p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/*  last curved button */
+
+.centered-button-section {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border-top-left-radius: 30px; /* Adjust radius to control curvature */
+    border-top-right-radius: 30px; /* Adjust radius to control curvature */
+    border: 2px solid #0000EE; /* Border color for the section */
+    overflow: hidden; /* Ensure content does not overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9; /* Background color for the section */
+}
+
+.centered-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0000EE; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.centered-button:hover {
+    background-color: #0000CC; /* Darker button color on hover */
+}
