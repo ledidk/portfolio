@@ -214,6 +214,7 @@ nav ul li a:hover::after{
 
 /* Notes Section */
 .notes{
+    margin-top: 2.5em;
 
 }
 .notes-content{
@@ -221,12 +222,70 @@ nav ul li a:hover::after{
     margin: 0 auto;
     padding: 0 10px;
 }
-.notes-content h1{
-    background-color: #2980b9;
+
+.note-tittle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6f1414;
+    margin-top: 3em;
+}
+
+.allnotes-btn{
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 0.5px solid #333;
+    color: black;
+    background-color: #d5d2d2;
+}
+
+.allnotes-btn:hover{
+    background-color: #e7e7e7;
+}
+
+.note-details{
+    max-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .note-details{
     background-color: #34dbb1;
+    border-bottom: 1px solid #0000EE;
+    padding: 10px; 
+}
+.note-details .title a{
+    text-decoration: none;
+    color: #0000EE;
+    transition: color 0.3s ease;
+}
+.note-details .dates a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #2d2d2d;
+}
+
+/* Hover effect when either the title or date is hovered */
+.note-details .title.hovered a{
+    text-decoration: underline; 
+    color:#0000CC;
+}
+.note-details .dates.hovered a {
+    color: black;
+}
+
+
+.articles{
+    margin-top: -20px;
+}
+
+.note-tittle h1{
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+
 }
 
 /* Project Section */ 
