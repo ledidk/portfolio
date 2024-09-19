@@ -377,8 +377,8 @@ nav ul li a:hover::after{
 .badges-title {
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center; 
+    align-items: center; 
     flex-direction: column; /
 }
 
@@ -388,7 +388,7 @@ nav ul li a:hover::after{
 }
 
 .badge-image {
-    flex: 1; /* Take up space for the image */
+    flex: 1; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -403,19 +403,20 @@ nav ul li a:hover::after{
 }
 
 .badge-details {
-    flex: 1; /* Take up equal space for each badge detail */
+    flex: 1; 
     padding: 15px;
+    margin-top: 1rem;
     border-left: 3px solid transparent;
     cursor: pointer;
     transition: border-color 0.3s ease;
 }
 
-.badge-details:hover {
-    border-left: 3px solid #0000EE; /* Change border color on hover */
+.badge-details {
+    border-left: 4px solid #bcb7b768; 
 }
 
 .badge-details.active {
-    border-left: 3px solid #0000EE; /* Change border color when active */
+    border-left: 3px solid  #eb5d17; 
 }
 
 .badge-details h2 {
@@ -431,26 +432,29 @@ nav ul li a:hover::after{
 
 
 /*  last curved button */
-
 .centered-button-section {
-    position: relative;
-    width: 300px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
-    border-top-left-radius: 30px; /* Adjust radius to control curvature */
-    border-top-right-radius: 30px; /* Adjust radius to control curvature */
-    border: 2px solid #0000EE; /* Border color for the section */
-    overflow: hidden; /* Ensure content does not overflow */
-    display: flex;
-    align-items: center;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, rgba(46, 89, 235, 1) 0%, rgba(90, 173, 246, 0.9) 50%, rgba(139, 230, 247, 1) 100%);
+    height: 150px;
+    padding-top: 130px;
+    clip-path: polygon(0% 0%, 100% 60%, 50% 80%, 0% 70%, 100% 0%, 100% 100%, 0% 100%);
+    color: white;
+    display: flex; 
     justify-content: center;
-    background: #f9f9f9; /* Background color for the section */
+    align-items: center; 
+}
+
+.centered-button-div {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .centered-button {
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #0000EE; /* Button color */
+    background-color: #0000EE;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -458,5 +462,16 @@ nav ul li a:hover::after{
 }
 
 .centered-button:hover {
-    background-color: #0000CC; /* Darker button color on hover */
+    background-color: #0000CC;
 }
+
+.footer_content{  
+    flex-shrink: 0;
+    background: linear-gradient(90deg, rgba(109,35,199,1) 0%, rgba(158,12,228,0.8820261380919555) 63%, rgba(128,62,226,0.8960317403328519) 100%);
+    height:150px;
+    padding-top:130px;
+    color: white;
+    padding-left:15px;
+    padding-right:5px;
+  }
+  
