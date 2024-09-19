@@ -1,29 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const titleLink = document.querySelector('.title');
-    const dateLink = document.querySelector('.dates');
+    // Select all elements with the 'note-title-text' and 'note-date' classes for the Notes section
+    const noteTitle = document.querySelector('.note-title-text');
+    const noteDate = document.querySelector('.note-date');
+    
+    // Select all elements with the 'article-title-text' and 'article-date' classes for the Articles section
+    const articleTitle = document.querySelector('.article-title-text');
+    const articleDate = document.querySelector('.article-date');
 
-    // Add event listeners to both the title and date
-    titleLink.addEventListener('mouseover', function() {
-        titleLink.classList.add('hovered');
-        dateLink.classList.add('hovered');
+    // Notes Section Hover Behavior
+    noteTitle.addEventListener('mouseover', function() {
+        noteTitle.classList.add('hovered');
+        noteDate.classList.add('hovered');
     });
 
-    titleLink.addEventListener('mouseout', function() {
-        titleLink.classList.remove('hovered');
-        dateLink.classList.remove('hovered');
+    noteTitle.addEventListener('mouseout', function() {
+        noteTitle.classList.remove('hovered');
+        noteDate.classList.remove('hovered');
     });
 
-    dateLink.addEventListener('mouseover', function() {
-        titleLink.classList.add('hovered');
-        dateLink.classList.add('hovered');
+    noteDate.addEventListener('mouseover', function() {
+        noteTitle.classList.add('hovered');
+        noteDate.classList.add('hovered');
     });
 
-    dateLink.addEventListener('mouseout', function() {
-        titleLink.classList.remove('hovered');
-        dateLink.classList.remove('hovered');
+    noteDate.addEventListener('mouseout', function() {
+        noteTitle.classList.remove('hovered');
+        noteDate.classList.remove('hovered');
+    });
+
+    // Articles Section Hover Behavior
+    articleTitle.addEventListener('mouseover', function() {
+        articleTitle.classList.add('hovered');
+        articleDate.classList.add('hovered');
+    });
+
+    articleTitle.addEventListener('mouseout', function() {
+        articleTitle.classList.remove('hovered');
+        articleDate.classList.remove('hovered');
+    });
+
+    articleDate.addEventListener('mouseover', function() {
+        articleTitle.classList.add('hovered');
+        articleDate.classList.add('hovered');
+    });
+
+    articleDate.addEventListener('mouseout', function() {
+        articleTitle.classList.remove('hovered');
+        articleDate.classList.remove('hovered');
     });
 });
-
 
 
 function changeImage(imagePath, element) {

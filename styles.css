@@ -73,13 +73,14 @@ nav ul li a:hover::after{
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
+    justify-content: space-between;
 }
 
 .text-content{
     width: 50%;
     float: left;
     margin-top: 100px;
-    height: 20%;
+    height: 20%; 
 }
 
 .text-content h1{
@@ -100,15 +101,17 @@ nav ul li a:hover::after{
 
 .buttons {
     margin-top: 20px;
+    width: 80px;
+    height: 20px;
 }
 
 .buttons .btn{
     display: inline-block;
     padding:12px 28px;
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 10px;
     margin-top: 1em;
-    background-color: #3498db;
+    background-color: #2980b9;
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -116,7 +119,7 @@ nav ul li a:hover::after{
 }
 
 .buttons .btn:hover {
-    background-color: #2980b9;
+    background-color: #3498db;
 }
 
 .buttons .btn{
@@ -125,33 +128,44 @@ nav ul li a:hover::after{
 
 .image-content{
     width: 50%;
-    float: left;
+    display: flex; 
     justify-content: center;
     align-items: center; 
-    margin-top: 0px;
-    background-color: #eb5d17;
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .image-box{
-    width: 80%;
-    height: calc(100% - 40px);
-    overflow: hidden;
     display: flex;
     justify-content: center;
-    background-color:  hwb(204 32% 10%); /* to be changed after adding animation to the image box div  line 153 - 163*/
     align-items: center;
-    margin-left: 10%;
-    margin-top: 40px;
     position: relative;
-    border-radius: 40px;
+    width: 90%;
+    height: 80%; 
+    aspect-ratio: 1.25;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.film-strip {
+    --s: 12px; 
+    --c:  #22222251;
+    width: calc(30 * var(--s)); 
+    aspect-ratio: 1.25; 
+    background: 
+      conic-gradient(at 50% var(--s), var(--c) 75%, #576b5400 0)
+      0 0 / calc(2 * var(--s)) calc(100% - var(--s)) padding-box;
+    border: var(--s) solid var(--c);
+    padding: calc(var(--s) * 2.5) calc(var(--s) * 1.5);
+    box-sizing: content-box;
 }
 
 .profile-picture{
-    height: auto;
+    width: 100%;
+    height: 95%;
     object-fit: cover;
     position: absolute;
-    left: 10%;
+    left: 1%;
+    margin-bottom: 0.5em;
 }
 
 @keyframes colorChange {
@@ -212,68 +226,54 @@ nav ul li a:hover::after{
     color: #eb5d17;
 }
 
-/* Notes Section */
-.notes{
-    margin-top: 2.5em;
 
+/* Notes Section */
+.notes {
+    margin-top: 2.5em;
 }
-.notes-content{
+
+.notes-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
-.note-tittle{
+.note-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6f1414;
+    /* background-color: #6f1414;*/
     margin-top: 3em;
 }
 
-.allnotes-btn{
-    padding: 12px 28px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 0.5px solid #333;
-    color: black;
-    background-color: #d5d2d2;
-}
-
-.allnotes-btn:hover{
-    background-color: #e7e7e7;
-}
-
-.note-details{
+.note-details, .article-details {
     max-height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background-color: #34dbb1;
+    border-bottom: 1px solid #0000EE;*/
+    padding: 10px;
 }
 
-.note-details{
-    background-color: #34dbb1;
-    border-bottom: 1px solid #0000EE;
-    padding: 10px; 
-}
-.note-details .title a{
+.note-details .note-title-text a,
+.article-details .article-title-text a {
     text-decoration: none;
     color: #3939c3;
     transition: color 0.3s ease;
 }
-.note-details .dates a {
+
+.note-details .note-date a,
+.article-details .article-date a {
     text-decoration: none;
     transition: color 0.3s ease;
     color: #2d2d2d;
 }
 
-/* Hover effect when either the title or date is hovered */
-.note-details .title.hovered a{
-    text-decoration: underline; 
-    color:#0000CC;
-}
-.note-details .dates.hovered a {
-    color: black;
+.note-details .hovered a,
+.article-details .hovered a {
+    text-decoration: underline;
+    color: #0000CC;
 }
 
 
@@ -287,7 +287,20 @@ nav ul li a:hover::after{
     margin-top: 2em;
 
 }
-
+/* css for notes, articles and project button redirect to all */
+.all-buttons{
+    width: 150px;
+    height: 50px;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 0.1px  #777777;
+    color: black;
+    background-color: #e7e7e7; /* Slightly lighter black */
+}
+.all-buttons:hover{
+    background-color: #777777;
+}
 /* Project Section */ 
 
 .projects {
@@ -304,18 +317,9 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2em;
 }
 
-.allprojects-btn{
-    padding: 12px 28px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 0.5px solid #333;
-    color: black;
-}
-.allprojects-btn:hover{
-    background-color: #e7e7e7;
-}
 .project-grid {
     display: grid; /* grid display for project items  */
     grid-template-columns: repeat(3, 1fr); /* grid colum row and numbers  */
@@ -357,13 +361,14 @@ nav ul li a:hover::after{
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
+    background-color:hsl(62, 40%, 50%);
     transition: background-color 0.3s ease;
-    background-color: hsl(62, 50%, 50%);
+    
     color: white;
 }
 
 .project-buttons button:hover{
-    background-color:hsl(62, 40%, 50%);
+    background-color: hsl(62, 50%, 50%);
 }
 
 /* badges  */
@@ -377,11 +382,19 @@ nav ul li a:hover::after{
 .badges-title {
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center; 
     flex-direction: column; /
 }
 
+.badges-title a {
+    text-decoration: none;
+    color: #3939c3;
+}
+.badges-title a:hover {
+    text-decoration: underline;
+    color: #0000CC;
+}
 .badges-grid {
     display: flex;
     gap: 20px;
@@ -432,45 +445,52 @@ nav ul li a:hover::after{
 
 
 /*  last curved button */
+
 .centered-button-section {
-    flex-shrink: 0;
-    background: linear-gradient(90deg, rgba(46, 89, 235, 1) 0%, rgba(90, 173, 246, 0.9) 50%, rgba(139, 230, 247, 1) 100%);
-    height: 150px;
+    --c: 70px; /* Control the curvature */
+    width: 100%;
+    height: 200px;
     padding-top: 130px;
-    clip-path: polygon(0% 0%, 100% 60%, 50% 80%, 0% 70%, 100% 0%, 100% 100%, 0% 100%);
-    color: white;
-    display: flex; 
+    aspect-ratio: 3/2;
+    mask: radial-gradient(60% var(--c) at top, #0000 calc(100% - 1em), #000);
+    background: linear-gradient(90deg, rgba(46, 89, 235, 1) 0%, rgba(90, 173, 246, 0.9) 50%, rgba(139, 230, 247, 1) 100%);
+    display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    color: white;
 }
 
 .centered-button-div {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
 }
 
 .centered-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #0000EE;
+    width: 150px;
+    height: 50px;
+    background-color: #777777; /* Slightly lighter black */
+    color: #fff; /* White text */
+    padding: 12px 28px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .centered-button:hover {
-    background-color: #0000CC;
+    background-color:  #999999; /* Slightly lighter black */
 }
+
 
 .footer_content{  
     flex-shrink: 0;
-    background: linear-gradient(90deg, rgba(109,35,199,1) 0%, rgba(158,12,228,0.8820261380919555) 63%, rgba(128,62,226,0.8960317403328519) 100%);
+   /* background: linear-gradient(90deg, rgba(109,35,199,1) 0%, rgba(158,12,228,0.8820261380919555) 63%, rgba(128,62,226,0.8960317403328519) 100%);*/
     height:150px;
     padding-top:130px;
-    color: white;
+    color: rgb(192, 25, 25);
     padding-left:15px;
     padding-right:5px;
   }
