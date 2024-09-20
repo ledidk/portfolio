@@ -520,6 +520,11 @@ footer {
     transform: translateY(-5px);
 }
 
-#copyright{
+#copyright a{
+    text-decoration: none;
     color: #eb5d17;
+}
+
+#copyright a:hover{
+    text-decoration:underline;
 }
