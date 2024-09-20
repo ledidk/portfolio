@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dieudonne Ntakirutimana">
+    <meta name="email" content="ddkntakirutimana@gmail.com">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat.css">
+    <meta name="description" content="Graduate with a degree in Web Development and Internet 
+                            Applications from Algonquin College Woodroffe.">
+    <link rel="icon" type="image/x-icon" href="/images/favicon2.png" sizes="16x16 32x32 64x64 128x128">
+    <script src="https://kit.fontawesome.com/6e9d089bb9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+            <ul>                <li style="visibility: hidden;" class="dark-mode-toggle">
+                <button id="dark-mode-btn">🌙 Dark Mode</button>
+            </li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- Credly badges Section -->
+
+
+
+    <!-- button las -->
+
+    <div class="centered-button-section">
+        <div class="centered-button-div">
+            <button class="centered-button">Click Me</button>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/diontakir/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ledidk" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:ddkntakirutimana@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <br/>
+            <p id="copyright">© diontakir</p>
+        </div>
+    </footer>
+
+    <!-- Chat Icon and Form -->
+<div id="chat-logo" class="chat-icon" style="display: none;">
+    <img src="images/chat-icon.png" alt="Chat Logo" onclick="openChatForm()">
+</div>
+
+<div id="chat-form" class="chat-form">
+    <div class="chat-header">
+        <h3>Send Us a Message</h3>
+        <span class="close-btn" onclick="closeChatForm()">&times;</span>
+    </div>
+    <div class="chat-body">
+        <form name="submit-to-google-sheet">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="msg"></p> <!-- Display message status here -->
+        </form>
+    </div>
+</div>
+
+    
+
+<script src="app.js"></script>
+
+</body>
+</html>

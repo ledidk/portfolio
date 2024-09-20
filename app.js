@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 function changeImage(imagePath, element) {
     // Change the main image source
     document.getElementById('main-image').src = imagePath;
@@ -63,4 +64,51 @@ function changeImage(imagePath, element) {
 
     // Add 'active' class to the clicked div
     element.classList.add('active');
+}
+
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbyuBgV0fP8zH1OLD7bQ0L6Qn0oFUXleGUFT06ndkscMW6gHa9jQKunTfYkW78_V5ueR/exec";
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  try {
+    const formData = new FormData(form);
+    const response = await fetch(scriptURL, { method: 'POST', body: formData });
+
+    if (response.ok) {
+      msg.textContent = "Message sent successfully";
+      setTimeout(function () {
+        msg.textContent = "";
+      }, 5000);
+      form.reset();
+    } else {
+      msg.textContent = "Failed to send message. Please try again.";
+    }
+  } catch (error) {
+    msg.textContent = "An error occurred. Please try again later.";
+    console.error('Error!', error.message);
+  }
+});
+
+
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY; 
+    var chatLogo = document.getElementById('chat-logo');
+
+    if (scrollPosition > 30) {
+        chatLogo.style.display = 'block';
+    } else {
+        chatLogo.style.display = 'none';
+    }
+});
+
+function openChatForm() {
+    document.getElementById('chat-form').classList.add('open');
+}
+
+function closeChatForm() {
+    document.getElementById('chat-form').classList.remove('open');
 }
