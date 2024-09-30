@@ -17,12 +17,18 @@ body {
 }
 
 /* Header Section */
-
 header {
     color: #333;
     padding: 0 10px; 
     text-align: center;
     border-bottom: 0.1px solid #afacac;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for separation */
+    background-color: white;
 }
 
 header nav{
@@ -543,9 +549,17 @@ footer {
 
 @media (max-width: 1024px){
     body{
-        background-color: rgb(255, 0, 212);
         overflow-x: hidden; /* Prevent horizontal scrolling */
         font-size: 18px;
+    }
+
+    nav ul li a::after{
+        background: whitesmoke;
+
+    }
+
+    header{
+        background-color: #333;
     }
 
     .home {
@@ -577,7 +591,7 @@ footer {
     }
 
     .home .buttons{
-        margin-left: 6em;
+        margin-left: 8em;
     }
     
     .text-content {
@@ -601,6 +615,24 @@ footer {
         border-radius: 8px;
 
 
+    }
+
+    .skills-content {
+        display: grid; /* grid display for project items  */
+        grid-template-columns: repeat(4, 1fr); /* grid colum row and numbers  */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-right: 2em;
+    }
+
+    .skills-content, .project-grid, .badges-grid {
+        gap: 5px;
+    }
+
+    .skill-item, .project-item, .badge-details {
+        max-width: 100%;
+        flex-basis: 100%;
     }
 
     .project-grid {
@@ -691,10 +723,6 @@ footer {
 
 
 @media (max-width: 768px){
-    body{
-        background-color: red;
-        font-size: 16px;
-    }
     .home {
         background: url(images/ledidkbg2.png) no-repeat center center fixed; /* Set background as fixed */
         background-size: cover; /* Ensures the image covers the entire area */
@@ -724,7 +752,7 @@ footer {
     }
 
     .home .buttons{
-        margin-left: 6em;
+        margin-left: 3em;
     }
     
     .text-content {
@@ -867,48 +895,37 @@ footer {
         width: 140px;
     }
 
-    header{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000; 
-        animation: fadeInDown 0.5s;
-        background-color: #333;
-    }
-
-    /* Display the menu toggle (hamburger icon) */
-    .open_icon {
-        display: block;
-    }
-
-    /* Display the close icon inside the menu */
-    .close_icon {
-        display: block;
-    }
-
-    /* Adjusting the menu items to look good on smaller screens */
-    #sidemenu li {
-        text-align: left;
-        padding: 10px 20px;
-        margin: 10px 0;
-    }
-
-    /* Adjust the side menu size for mobile */
     #sidemenu {
-        width: 250px;
+        display: flex;
+        list-style: none;
+        transition: all 0.3s ease;
     }
 
-    /* Hide the side menu on larger screens */
-    nav ul {
-        display: none;
-    }
 
+    li{
+        margin-right: 20%;
+    }
     .logo{
         width: 80px;
         display: block;
     }
 
-    
+    .badges-title {
+        font-size: 14px;
+    }
 
+    .badges-title h3{
+        font-size: 16px;
+    }
+
+    .project-caption h2{
+        font-size: 18px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    
 
 }
