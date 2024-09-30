@@ -16,16 +16,22 @@
 <body>
     <header>
         <nav>
-            <a href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
-            <ul>                <li style="visibility: hidden;" class="dark-mode-toggle">
-                <button id="dark-mode-btn">🌙 Dark Mode</button>
-            </li>
+            <a href="index.html">
+                <img src="images/logo.png" alt="" class="logo">
+            </a>
+            <ul id="sidemenu">
+                <li style="visibility: hidden;" class="dark-mode-toggle">
+                    <button id="dark-mode-btn">🌙 Dark Mode</button>
+                    <i id="close_icon" class="fa-solid fa-xmark close_icon" onclick="closemenu()"></i>
+                </li>
                 <li><a href="notes.html">Notes</a></li>
                 <li><a href="articles.html">Articles</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="about.html">About Me</a></li>
             </ul>
+            <i id="open_icon" class="fa-solid fa-bars open_icon" onclick="openmenu()"></i>
         </nav>
+        
     </header>
     <!-- home Section -->
     <div class="home">
@@ -236,6 +242,28 @@
     
 
 <script src="app.js"></script>
+<script>
+  var sidemenu = document.getElementById("sidemenu");
+var openIcon = document.getElementById("open_icon");
+var closeIcon = document.querySelector(".close_icon");
+
+function openmenu() {
+    sidemenu.classList.add('active');  // Slide menu in
+    openIcon.classList.add('hide');    // Hide the hamburger icon
+}
+
+function closemenu() {
+    sidemenu.classList.remove('active');  // Slide menu out
+    openIcon.classList.remove('hide');    // Show the hamburger icon
+    // Removing the active class from all links when the menu is closed
+    var links = sidemenu.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].classList.remove('active');
+    }
+}
+
+
+</script>
 
 </body>
 </html>

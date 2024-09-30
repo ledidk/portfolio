@@ -528,3 +528,369 @@ footer {
 #copyright a:hover{
     text-decoration:underline;
 }
+
+footer {
+    background-color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px){
+    .home {
+        background: url(images/ledidkbg2.png) no-repeat center center fixed; /* Set background as fixed */
+        background-size: cover; /* Ensures the image covers the entire area */
+        min-height: 100vh; /* Ensures the section takes at least the height of the viewport */
+        display: flex;
+        align-items: center; /* Vertically centers content */
+        justify-content: center; /* Horizontally centers content */
+        position: relative;
+        z-index: 1;
+    }
+    
+    .home:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1; 
+    }
+    .home h1{
+        font-size: 3em;
+    }
+    .home h2{
+        font-size: 1.2em;
+    }
+
+    .home .buttons{
+        margin-left: 5em;
+    }
+    
+    .text-content {
+        color: white;
+        text-align: center;
+    }
+    
+    
+    .image-content .image-box img {
+        width: 100%;
+        border-radius: 50%;
+    }
+    
+    .image-content{
+        display: none;
+    }
+    .text-content{
+        
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 8px;
+
+
+    }
+
+    .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .project-item {
+        flex: 1 1 calc(33.33% - 20px);
+        background-color: #f4f4f4;
+    }
+
+    .project-buttons {
+        margin-top: 10px;
+    }
+
+    .project-buttons {
+        /* display: flex; */
+        /* justify-content: flex-start; /* Aligning the buttons to the left */
+        gap: 0.5rem;
+    }
+    
+    .project-buttons button {
+        border: none;
+        padding:12px 28px;
+        margin-top: 10px;
+        margin-right: 25px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color:hsl(62, 40%, 50%);
+        transition: background-color 0.3s ease;
+        
+        color: white;
+    }
+    
+    .project-buttons button:hover{
+        background-color: hsl(62, 50%, 50%);
+    }
+
+    .badges {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .badges-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .badge-image {
+        display: none;
+    }
+    
+    .badge-details {
+        flex: 1 1 calc(33.33% - 20px);
+        background-color: #f4f4f4;
+        padding: 15px;
+    }
+
+    .badge-details {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .badge-details.active {
+        border-left: 0; 
+        box-shadow:  0 4px 8px rgba(0, 0, 0, 0.565);
+    }
+
+    .skills-content{
+        margin-right: 2em;
+    }
+
+
+}
+
+
+@media (max-width: 760px){
+    body{
+        background-color: red;
+    }
+    .home {
+        background: url(images/ledidkbg2.png) no-repeat center center fixed; /* Set background as fixed */
+        background-size: cover; /* Ensures the image covers the entire area */
+        min-height: 100vh; /* Ensures the section takes at least the height of the viewport */
+        display: flex;
+        align-items: center; /* Vertically centers content */
+        justify-content: center; /* Horizontally centers content */
+        position: relative;
+        z-index: 1;
+    }
+    
+    .home:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1; 
+    }
+    .home h1{
+        font-size: 2em;
+    }
+    .home h2{
+        font-size: 1em;
+    }
+
+    .home .buttons{
+        margin-left: 1em;
+    }
+    
+    .text-content {
+        color: white;
+        text-align: center;
+    }
+    
+    
+    .image-content .image-box img {
+        width: 100%;
+        border-radius: 50%;
+    }
+    
+    .image-content{
+        display: none;
+    }
+    .text-content{
+        
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 8px;
+
+
+    }
+
+    .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .project-item {
+        flex: 1 1 calc(33.33% - 20px);
+        background-color: #f4f4f4;
+    }
+
+    .project-buttons {
+        margin-top: 10px;
+    }
+
+    .project-buttons {
+        /* display: flex; */
+        /* justify-content: flex-start; /* Aligning the buttons to the left */
+        gap: 0.5rem;
+    }
+    
+    .project-buttons button {
+        border: none;
+        padding:12px 28px;
+        margin-top: 10px;
+        margin-right: 25px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color:hsl(62, 40%, 50%);
+        transition: background-color 0.3s ease;
+        
+        color: white;
+    }
+    
+    .project-buttons button:hover{
+        background-color: hsl(62, 50%, 50%);
+    }
+
+    .badges {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .badges-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .badge-image {
+        display: none;
+    }
+    
+    .badge-details {
+        flex: 1 1 calc(33.33% - 20px);
+        background-color: #f4f4f4;
+        padding: 15px;
+    }
+
+    .badge-details {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .badge-details.active {
+        border-left: 0; 
+        box-shadow:  0 4px 8px rgba(0, 0, 0, 0.565);
+    }
+
+    .skills-content {
+        display: grid; /* grid display for project items  */
+        grid-template-columns: repeat(2, 1fr); /* grid colum row and numbers  */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-right: 2em;
+    }
+
+    .skills-content, .project-grid, .badges-grid {
+        gap: 5px;
+    }
+
+    .skill-item, .project-item, .badge-details {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+
+    .note-tittle h1{
+        font-size: 1em;
+        margin-bottom: 1.5em;
+        margin-top: 1em;
+    
+    }
+    /* css for notes, articles and project button redirect to all */
+    .all-buttons{
+        width: 130px;
+        height: 50px;
+        padding: 12px 28px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 0.1px  #777777;
+        color: black;
+        background-color: #e7e7e7; /* Slightly lighter black */
+    }
+
+    .note-details h4{
+        font-size: 0.9em;
+
+    }
+    .article-details h4{
+        font-size: 0.9em;
+
+    }
+
+    .all-buttons{
+        font-size: 14px;
+        width: 140px;
+    }
+
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000; 
+        animation: fadeInDown 0.5s;
+        background-color: #333;
+    }
+
+    /* Display the menu toggle (hamburger icon) */
+    .open_icon {
+        display: block;
+    }
+
+    /* Display the close icon inside the menu */
+    .close_icon {
+        display: block;
+    }
+
+    /* Adjusting the menu items to look good on smaller screens */
+    #sidemenu li {
+        text-align: left;
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
+    /* Adjust the side menu size for mobile */
+    #sidemenu {
+        width: 250px;
+    }
+
+    /* Hide the side menu on larger screens */
+    nav ul {
+        display: none;
+    }
+
+    
+
+
+}
+
+#open_icon{
+    display: none;
+}
