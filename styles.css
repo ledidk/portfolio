@@ -112,6 +112,17 @@ nav ul li a:hover::after{
     margin-bottom: 1em;
     color: #3498db;
 }
+.text-content a{
+    text-decoration: none;
+}
+.text-content a:hover{
+    text-decoration: underline;
+    color: #3498db;;
+}
+.linksto{
+    color: #3498db;
+}
+
 
 .buttons {
     margin-top: 20px;
