@@ -487,11 +487,7 @@ nav ul li a:hover::after{
 
 .badge-details p {
     margin: 0;
-    font-size: 16px;
-    color: #666;
-}
-
-.badge-details p{
+    font-size: 20px;
     line-height: 1.6;
 }
 

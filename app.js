@@ -112,3 +112,4 @@ function openChatForm() {
 function closeChatForm() {
     document.getElementById('chat-form').classList.remove('open');
 }
+
