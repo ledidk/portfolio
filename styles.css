@@ -96,17 +96,19 @@ nav ul li a:hover::after{
 }
 
 .text-content h1{
-    font-size: 4.5em;
+    font-size: 3em;
     margin-bottom: 0.5em;
+   
 }
 
-.text-content h2{
+.text-content p{
     font-size: 1.5em;
     margin-bottom: 1em;
+    color: #333;
 }
 
 .text-content h3{
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin-bottom: 1em;
     color: #3498db;
 }
@@ -118,9 +120,10 @@ nav ul li a:hover::after{
 }
 
 .buttons .btn{
+    width: 100%;
     display: inline-block;
     padding:12px 28px;
-    font-size: 18px;
+    font-size: 16px;
     margin-right: 10px;
     margin-top: 1em;
     background-color: #2980b9;
