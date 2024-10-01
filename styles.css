@@ -15,7 +15,9 @@ body {
     align-items: center;
     margin-left: 2.9em;
 }
-
+p{
+    line-height: 1.5;
+}
 /* Header Section */
 header {
     color: #333;
@@ -146,6 +148,8 @@ nav ul li a:hover::after{
 
 .buttons .btn:hover {
     background-color: #3498db;
+    color: white;
+    text-decoration: none;
 }
 
 .buttons .btn{
@@ -415,11 +419,18 @@ nav ul li a:hover::after{
 
 .badges-title a {
     text-decoration: none;
-    color: #3939c3;
+    color: #3498db;
 }
+
 .badges-title a:hover {
     text-decoration: underline;
-    color: #0000CC;
+    color:  #3498db;
+}
+
+.badges-title p{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #333;
 }
 .badges-grid {
     display: flex;
@@ -450,9 +461,20 @@ nav ul li a:hover::after{
     transition: border-color 0.3s ease;
 }
 
+.badge-details a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.badge-details a:hover {
+    text-decoration: underline;
+    color:  #3498db;
+}
+
 .badge-details {
     border-left: 4px solid #bcb7b768; 
 }
+
 
 .badge-details.active {
     border-left: 3px solid  #eb5d17; 
@@ -467,6 +489,10 @@ nav ul li a:hover::after{
     margin: 0;
     font-size: 16px;
     color: #666;
+}
+
+.badge-details p{
+    line-height: 1.6;
 }
 
 
