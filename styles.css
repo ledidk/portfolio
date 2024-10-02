@@ -289,7 +289,7 @@ nav ul li a:hover::after{
 .note-details .note-title-text a,
 .article-details .article-title-text a {
     text-decoration: none;
-    color: #3939c3;
+    color:#3498db;
     transition: color 0.3s ease;
 }
 
@@ -303,7 +303,7 @@ nav ul li a:hover::after{
 .note-details .hovered a,
 .article-details .hovered a {
     text-decoration: underline;
-    color: #0000CC;
+    color: #3498db;
 }
 
 
@@ -351,8 +351,8 @@ nav ul li a:hover::after{
 }
 
 .project-grid {
-    display: grid; /* grid display for project items  */
-    grid-template-columns: repeat(3, 1fr); /* grid colum row and numbers  */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
     gap: 2rem;
 }
 
@@ -366,6 +366,12 @@ nav ul li a:hover::after{
     transition: transform 0.3s ease; 
 }
 
+.project-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+
+}
 
 .project-caption h2 {
     font-size: 1.5rem;
@@ -375,6 +381,7 @@ nav ul li a:hover::after{
 .project-caption p {
     font-size: 1rem;
     margin-bottom: 1rem;
+    
 }
 
 .project-buttons {
@@ -442,15 +449,30 @@ nav ul li a:hover::after{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
-.badge-image img {
+.badge-images img {
     width: 100%;
     max-width: 400px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.badge-image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
 
 .badge-details {
     flex: 1; 

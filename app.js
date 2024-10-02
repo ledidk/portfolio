@@ -1,54 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Select all elements with the 'note-title-text' and 'note-date' classes for the Notes section
-    const noteTitle = document.querySelector('.note-title-text');
-    const noteDate = document.querySelector('.note-date');
+    const noteTitles = document.querySelectorAll('.note-title-text');
+    const noteDates = document.querySelectorAll('.note-date');
     
     // Select all elements with the 'article-title-text' and 'article-date' classes for the Articles section
-    const articleTitle = document.querySelector('.article-title-text');
-    const articleDate = document.querySelector('.article-date');
+    const articleTitles = document.querySelectorAll('.article-title-text');
+    const articleDates = document.querySelectorAll('.article-date');
 
-    // Notes Section Hover Behavior
-    noteTitle.addEventListener('mouseover', function() {
-        noteTitle.classList.add('hovered');
-        noteDate.classList.add('hovered');
-    });
+    // Helper function to add hover behavior to each set of title and date elements
+    function addHoverBehavior(titles, dates) {
+        titles.forEach((title, index) => {
+            const correspondingDate = dates[index];
+            title.addEventListener('mouseover', function() {
+                title.classList.add('hovered');
+                correspondingDate.classList.add('hovered');
+            });
 
-    noteTitle.addEventListener('mouseout', function() {
-        noteTitle.classList.remove('hovered');
-        noteDate.classList.remove('hovered');
-    });
+            title.addEventListener('mouseout', function() {
+                title.classList.remove('hovered');
+                correspondingDate.classList.remove('hovered');
+            });
 
-    noteDate.addEventListener('mouseover', function() {
-        noteTitle.classList.add('hovered');
-        noteDate.classList.add('hovered');
-    });
+            correspondingDate.addEventListener('mouseover', function() {
+                title.classList.add('hovered');
+                correspondingDate.classList.add('hovered');
+            });
 
-    noteDate.addEventListener('mouseout', function() {
-        noteTitle.classList.remove('hovered');
-        noteDate.classList.remove('hovered');
-    });
+            correspondingDate.addEventListener('mouseout', function() {
+                title.classList.remove('hovered');
+                correspondingDate.classList.remove('hovered');
+            });
+        });
+    }
 
-    // Articles Section Hover Behavior
-    articleTitle.addEventListener('mouseover', function() {
-        articleTitle.classList.add('hovered');
-        articleDate.classList.add('hovered');
-    });
+    // Apply hover behavior to Notes section
+    addHoverBehavior(noteTitles, noteDates);
 
-    articleTitle.addEventListener('mouseout', function() {
-        articleTitle.classList.remove('hovered');
-        articleDate.classList.remove('hovered');
-    });
-
-    articleDate.addEventListener('mouseover', function() {
-        articleTitle.classList.add('hovered');
-        articleDate.classList.add('hovered');
-    });
-
-    articleDate.addEventListener('mouseout', function() {
-        articleTitle.classList.remove('hovered');
-        articleDate.classList.remove('hovered');
-    });
+    // Apply hover behavior to Articles section
+    addHoverBehavior(articleTitles, articleDates);
 });
+
 
 
 
