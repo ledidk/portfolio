@@ -54,7 +54,7 @@ header nav ul li{
 }
 
 header nav ul li a{
-color:  #3498db;
+color:  #2980b9;
 font-weight: 50%;
 text-decoration: none;
 position: relative;
@@ -65,7 +65,7 @@ nav ul li a::after{
     content: ' ';
     width: 0;
     height: 3px;
-    background: #333;
+    background: #3498db;
     position: absolute;
     left: 0;
     bottom: -6px;
