@@ -657,6 +657,9 @@ footer {
         color: white;
         text-align: center;
     }
+    .text-content p{
+        color: #000;
+    }
     
     
     .image-content .image-box img {
@@ -811,7 +814,7 @@ footer {
     }
 
     .home .buttons{
-        margin-left: 2em;
+        margin-left: 6em;
     }
     
     .text-content {
@@ -860,7 +863,7 @@ footer {
         flex: 1 1 calc(33.33% - 20px);
         background-color: #f4f4f4;
     }
-    
+
     .project-buttons {
         margin-top: 10px;
     }
