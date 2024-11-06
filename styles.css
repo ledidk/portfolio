@@ -814,7 +814,8 @@ footer {
     }
 
     .home .buttons{
-        margin-left: 6em;
+        margin-left: 4em;
+        margin-bottom: 3em;
     }
     
     .text-content {
@@ -832,16 +833,17 @@ footer {
         display: none;
     }
     .text-content{
-        
         padding: 10px;
         margin: 5px 0;
         border-radius: 8px;
         width: 85%;
         margin-top: 3em;
+        height: 80%;
     }
 
     .text-content h3{
-        font-size: 2em;
+        font-size: 1.5em;
+        margin-top: 3em;
 
     }
 
