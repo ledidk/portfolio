@@ -846,6 +846,10 @@ footer {
         color: #000;
     }
 
+    .projects{
+        margin-top: 3em;
+    }
+
     .project-grid {
         display: flex;
         flex-wrap: wrap;
@@ -856,7 +860,7 @@ footer {
         flex: 1 1 calc(33.33% - 20px);
         background-color: #f4f4f4;
     }
-
+    
     .project-buttons {
         margin-top: 10px;
     }
