@@ -1,3 +1,3 @@
 # portfolio
 
-today
+today jan 28
