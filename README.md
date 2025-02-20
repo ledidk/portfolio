@@ -1,3 +1,3 @@
 # portfolio
 
-today jan 30
+today feb 19, 2025
